@@ -2,9 +2,11 @@
   "name": "ng-pokemon-back",
   "version": "1.0.0",
   "description": "Pokemon App Back",
-  "main": "app.js",
+  "type": "module",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",
@@ -18,13 +20,18 @@
   "homepage": "https://github.com/MarcosSesa/ng-pokemon-back#readme",
   "devDependencies": {
     "@types/node": "^20.12.12",
+    "nodemon": "^3.1.0",
     "prisma": "^5.14.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
   "dependencies": {
     "@prisma/client": "^5.14.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "prettier": "^3.2.5"
+    "jsonwebtoken": "^9.0.2",
+    "prettier": "^3.2.5",
+    "zod": "^3.23.8"
   }
 }
