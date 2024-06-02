@@ -3,3 +3,4 @@ node_modules
 .env
 prisma/db
 prisma/migrations
+package-lock.json
