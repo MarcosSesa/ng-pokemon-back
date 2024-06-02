@@ -5,6 +5,7 @@ import { PrismaClient } from "@prisma/client";
 const userRoutes = express.Router();
 const prisma = new PrismaClient();
 
+// Return an array of the logged user cards for a given expansion
 userRoutes.post("/cards", authenticateToken, (req, res) => {
   try {
     const userId = req.user.id;
@@ -29,7 +30,8 @@ userRoutes.post("/cards", authenticateToken, (req, res) => {
   }
 });
 
-userRoutes.get("/cards/add", authenticateToken, (req, res) => {
+// Add a card to the logged user collection for a given expansion
+userRoutes.post("/cards/add", authenticateToken, (req, res) => {
   try {
     const userId = req.user.id;
     const { setId, cardId } = req.body;
